@@ -1,0 +1,137 @@
+@import "../../global.scss";
+
+.mee {
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 200;
+}
+.me {
+  display: flex;
+  font-size: 40px;
+  font-weight: 400;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  @include mobile {
+    margin-bottom: 0;
+    font-size: 30px;
+  }
+}
+
+.aboutme {
+  background-color: white;
+  overflow: hidden;
+  .container {
+    display: grid;
+    grid-template-columns: 55% 40%;
+    gap: 0;
+    padding: 35px;
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+    }
+
+    .left {
+      width: 100%;
+      height: 80%;
+
+      @include mobile {
+        width: 100%;
+        height: 50%;
+      }
+      .imgContainer {
+        display: flex;
+        overflow: hidden;
+
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          width: 100vw;
+          height: 100vh;
+          margin-bottom: 1654px;
+
+          @include mobile {
+            margin-top: 0;
+            width: 247px;
+            height: 195px;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    .right {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      .wrapper {
+        width: 550px;
+        margin-top: 0;
+
+        // margin: 10px 0;
+
+        .socials {
+          display: flex;
+          gap: 20px;
+
+          @include mobile {
+            align-items: center;
+            justify-content: center;
+          }
+
+          .resume {
+            border: 1px solid crimson;
+            a {
+              color: black;
+            }
+
+            &:hover {
+              background-color: crimson;
+              a {
+                color: white;
+              }
+            }
+          }
+        }
+
+        p {
+          font-size: 18px;
+          margin-top: 0px;
+          font-weight: 200;
+
+          @include mobile {
+            font-size: 13px;
+            padding: 25px;
+          }
+          .about_me {
+            margin-top: 15px;
+            margin-bottom: 25px;
+            @include mobile {
+              padding: 0;
+            }
+          }
+        }
+
+        a {
+          color: $mainColor;
+
+          border: 1px solid $mainColor;
+          padding: 8px;
+          text-decoration: none;
+          border-radius: 5px;
+          text-align: center;
+          transition: all 0.5s ease;
+        }
+
+        a:hover {
+          background-color: $mainColor;
+          color: white;
+        }
+      }
+    }
+  }
+}
